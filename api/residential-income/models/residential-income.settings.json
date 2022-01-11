@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "residential_incomes",
+  "info": {
+    "name": "ResidentialIncome"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DescriptionIncome": {
+      "type": "string"
+    },
+    "Amount": {
+      "type": "decimal"
+    },
+    "InvoiceReceipt": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Active": {
+      "type": "boolean"
+    },
+    "DateIncome": {
+      "type": "datetime"
+    },
+    "Residential": {
+      "model": "residential"
+    }
+  }
+}

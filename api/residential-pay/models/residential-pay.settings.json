@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "residential_pays",
+  "info": {
+    "name": "ResidentialPay",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DescriptionPay": {
+      "type": "string"
+    },
+    "Amount": {
+      "type": "decimal"
+    },
+    "InvoiceReceipt": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true
+    },
+    "DatePay": {
+      "type": "datetime"
+    },
+    "Residential": {
+      "model": "residential"
+    }
+  }
+}

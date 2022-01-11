@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/residentials",
+      "handler": "residential.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/residentials/count",
+      "handler": "residential.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/residentials/:id",
+      "handler": "residential.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/residentials",
+      "handler": "residential.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/residentials/:id",
+      "handler": "residential.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/residentials/:id",
+      "handler": "residential.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

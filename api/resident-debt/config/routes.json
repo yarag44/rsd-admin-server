@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/resident-debts",
+      "handler": "resident-debt.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resident-debts/count",
+      "handler": "resident-debt.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resident-debts/:id",
+      "handler": "resident-debt.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/resident-debts",
+      "handler": "resident-debt.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/resident-debts/:id",
+      "handler": "resident-debt.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/resident-debts/:id",
+      "handler": "resident-debt.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

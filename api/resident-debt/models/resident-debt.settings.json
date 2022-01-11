@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resident_debts",
+  "info": {
+    "name": "ResidentDebt",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Debt": {
+      "type": "decimal",
+      "required": true
+    },
+    "House": {
+      "model": "resident"
+    }
+  }
+}

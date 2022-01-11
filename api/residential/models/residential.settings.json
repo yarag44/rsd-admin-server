@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "residentials",
+  "info": {
+    "name": "Residential",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "Active": {
+      "type": "boolean"
+    },
+    "residents": {
+      "via": "residential",
+      "collection": "resident"
+    }
+  }
+}

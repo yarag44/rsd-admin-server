@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/resident-pays",
+      "handler": "resident-pay.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resident-pays/count",
+      "handler": "resident-pay.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/resident-pays/:id",
+      "handler": "resident-pay.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/resident-pays",
+      "handler": "resident-pay.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/resident-pays/:id",
+      "handler": "resident-pay.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/resident-pays/:id",
+      "handler": "resident-pay.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

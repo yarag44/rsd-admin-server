@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "ressidential_configurations",
+  "info": {
+    "name": "RessidentialConfiguration",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "MonthAmount": {
+      "type": "decimal"
+    },
+    "Residential": {
+      "model": "residential"
+    }
+  }
+}

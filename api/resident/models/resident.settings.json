@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "residents",
+  "info": {
+    "name": "Resident",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "LastName": {
+      "type": "string",
+      "required": true
+    },
+    "House": {
+      "type": "string",
+      "required": true
+    },
+    "Phone": {
+      "type": "string"
+    },
+    "Street": {
+      "type": "string"
+    },
+    "user": {
+      "via": "resident",
+      "plugin": "users-permissions",
+      "model": "user"
+    },
+    "residential": {
+      "model": "residential",
+      "via": "residents"
+    }
+  }
+}

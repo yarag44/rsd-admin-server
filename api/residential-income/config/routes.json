@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/residential-incomes",
+      "handler": "residential-income.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/residential-incomes/count",
+      "handler": "residential-income.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/residential-incomes/:id",
+      "handler": "residential-income.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/residential-incomes",
+      "handler": "residential-income.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/residential-incomes/:id",
+      "handler": "residential-income.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/residential-incomes/:id",
+      "handler": "residential-income.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

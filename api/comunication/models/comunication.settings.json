@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "comunications",
+  "info": {
+    "name": "Comunication"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "DateComunicate": {
+      "type": "datetime"
+    },
+    "Comunicate": {
+      "type": "text"
+    },
+    "Images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

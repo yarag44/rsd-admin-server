@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/reservation-pays",
+      "handler": "reservation-pay.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reservation-pays/count",
+      "handler": "reservation-pay.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/reservation-pays/:id",
+      "handler": "reservation-pay.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/reservation-pays",
+      "handler": "reservation-pay.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/reservation-pays/:id",
+      "handler": "reservation-pay.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/reservation-pays/:id",
+      "handler": "reservation-pay.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

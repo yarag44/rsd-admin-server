@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reservation_pays",
+  "info": {
+    "name": "ReservationPay"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "DescriptionReservation": {
+      "type": "string"
+    },
+    "DateTimeReservation": {
+      "type": "datetime"
+    },
+    "Amount": {
+      "type": "decimal"
+    },
+    "InvoiceReceipt": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

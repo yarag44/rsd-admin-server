@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "resident_pays",
+  "info": {
+    "name": "ResidentPay",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Amount": {
+      "type": "decimal"
+    },
+    "Year": {
+      "type": "integer"
+    },
+    "Month": {
+      "type": "integer"
+    },
+    "Resident": {
+      "model": "resident"
+    },
+    "InvoiceReceipt": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

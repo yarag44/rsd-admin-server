@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/residential-pays",
+      "handler": "residential-pay.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/residential-pays/count",
+      "handler": "residential-pay.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/residential-pays/:id",
+      "handler": "residential-pay.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/residential-pays",
+      "handler": "residential-pay.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/residential-pays/:id",
+      "handler": "residential-pay.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/residential-pays/:id",
+      "handler": "residential-pay.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
