@@ -38,6 +38,10 @@
     "residential": {
       "model": "residential",
       "via": "residents"
+    },
+    "resident_debt": {
+      "via": "house",
+      "model": "resident-debt"
     }
   }
 }
