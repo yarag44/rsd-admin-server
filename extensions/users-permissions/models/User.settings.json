@@ -62,6 +62,10 @@
     "resident": {
       "via": "user",
       "model": "resident"
+    },
+    "resident_pays": {
+      "via": "User",
+      "collection": "resident-pay"
     }
   }
 }

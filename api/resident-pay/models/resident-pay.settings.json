@@ -21,9 +21,6 @@
     "Month": {
       "type": "integer"
     },
-    "Resident": {
-      "model": "resident"
-    },
     "InvoiceReceipt": {
       "collection": "file",
       "via": "related",
@@ -35,6 +32,18 @@
       "plugin": "upload",
       "required": false,
       "pluginOptions": {}
+    },
+    "IsPaid": {
+      "type": "boolean",
+      "default": false
+    },
+    "Comments": {
+      "type": "text"
+    },
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "resident_pays"
     }
   }
 }
