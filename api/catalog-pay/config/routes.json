@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/catalog-pays",
+      "handler": "catalog-pay.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-pays/count",
+      "handler": "catalog-pay.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-pays/:id",
+      "handler": "catalog-pay.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/catalog-pays",
+      "handler": "catalog-pay.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/catalog-pays/:id",
+      "handler": "catalog-pay.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/catalog-pays/:id",
+      "handler": "catalog-pay.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

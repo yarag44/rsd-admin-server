@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catalog_pays",
+  "info": {
+    "name": "CatalogPay"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "TypePay": {
+      "type": "string"
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
