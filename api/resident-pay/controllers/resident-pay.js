@@ -11,10 +11,10 @@ module.exports = {
     async create(ctx)
     {
 
-        const { auth,formData,amount,strapitoken,user,comments,month,year } = ctx.request.body;
+        const { auth,formData,amount,strapitoken,user,comments,month,year,catPaid } = ctx.request.body;
 
-        console.log(amount);
-        console.log(user.id);
+        // console.log(amount);
+        // console.log(user.id);
 
 
         // const charge = await stripe.charges.create({
@@ -33,17 +33,19 @@ module.exports = {
             Amount : amount,
             Year : year,
             Month : month,
-            Resident : user.Resident,
+            Comments : comments,
+            User : user,
+            'catalog_pay' : catPaid
         }
 
-        console.log(user);
+        //console.log(catPaid[0]);
 
         const validData = await strapi.entityValidator.validateEntityCreation(
             strapi.models.resident_pay,
             data
         );
 
-        console.log(validData);
+        //console.log(validData);
 
         const entry = await strapi.query("resident-pay").create(validData);
         createPay.push(entry);

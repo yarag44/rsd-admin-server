@@ -33,8 +33,9 @@
       "required": false,
       "pluginOptions": {}
     },
-    "residential": {
-      "model": "residential",
+    "User": {
+      "plugin": "users-permissions",
+      "model": "user",
       "via": "reservation_pays"
     }
   }

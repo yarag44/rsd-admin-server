@@ -23,10 +23,6 @@
       "via": "residential",
       "collection": "resident"
     },
-    "reservation_pays": {
-      "via": "residential",
-      "collection": "reservation-pay"
-    },
     "comunications": {
       "via": "residential",
       "collection": "comunication"

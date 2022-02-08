@@ -66,6 +66,10 @@
     "resident_pays": {
       "via": "User",
       "collection": "resident-pay"
+    },
+    "reservation_pays": {
+      "via": "User",
+      "collection": "reservation-pay"
     }
   }
 }
