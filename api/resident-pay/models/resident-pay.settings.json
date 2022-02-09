@@ -47,6 +47,10 @@
     },
     "catalog_pay": {
       "model": "catalog-pay"
+    },
+    "reservation_pay": {
+      "via": "resident_pays",
+      "model": "reservation-pay"
     }
   }
 }

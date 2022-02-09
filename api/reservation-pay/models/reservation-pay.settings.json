@@ -12,31 +12,17 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "DescriptionReservation": {
-      "type": "string"
-    },
     "DateTimeReservation": {
       "type": "datetime"
-    },
-    "Amount": {
-      "type": "decimal"
-    },
-    "InvoiceReceipt": {
-      "collection": "file",
-      "via": "related",
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos"
-      ],
-      "plugin": "upload",
-      "required": false,
-      "pluginOptions": {}
     },
     "User": {
       "plugin": "users-permissions",
       "model": "user",
       "via": "reservation_pays"
+    },
+    "resident_pays": {
+      "collection": "resident-pay",
+      "via": "reservation_pay"
     }
   }
 }
