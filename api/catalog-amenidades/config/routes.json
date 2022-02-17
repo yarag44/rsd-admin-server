@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/catalog-amenidades",
+      "handler": "catalog-amenidades.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-amenidades/count",
+      "handler": "catalog-amenidades.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/catalog-amenidades/:id",
+      "handler": "catalog-amenidades.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/catalog-amenidades",
+      "handler": "catalog-amenidades.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/catalog-amenidades/:id",
+      "handler": "catalog-amenidades.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/catalog-amenidades/:id",
+      "handler": "catalog-amenidades.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

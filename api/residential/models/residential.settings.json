@@ -26,6 +26,10 @@
     "comunications": {
       "via": "residential",
       "collection": "comunication"
+    },
+    "catalog_amenidades": {
+      "via": "residential",
+      "collection": "catalog-amenidades"
     }
   }
 }

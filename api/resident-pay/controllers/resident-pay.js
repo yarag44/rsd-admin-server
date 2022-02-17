@@ -11,7 +11,7 @@ module.exports = {
     async create(ctx)
     {
 
-        const { auth,formData,amount,strapitoken,user,comments,month,year,catPaid } = ctx.request.body;
+        const { auth,formData,amount,strapitoken,user,comments,month,year,catPaid,SelectedAmenity,resultPago,dateTimeReservation } = ctx.request.body;
 
         // console.log(amount);
         // console.log(user.id);
@@ -25,17 +25,19 @@ module.exports = {
             
         // });
 
-       
+        //console.log(SelectedAmenity);
+
         const createPay = [];
 
         let data = {
 
             Amount : amount,
-            Year : year,
-            Month : month,
+            Year : catPaid.TypePay === 'Pago Reservacion' ? 0 : year,
+            Month : catPaid.TypePay === 'Pago Reservacion' ? 0 : month,
             Comments : comments,
             User : user,
-            'catalog_pay' : catPaid
+            'catalog_pay' : catPaid //,
+            //Amenity : SelectedAmenity
         }
 
         //console.log(catPaid[0]);
@@ -51,6 +53,25 @@ module.exports = {
         createPay.push(entry);
 
 
+        if(catPaid.TypePay === 'Pago Reservacion')
+        {
+            let dataReservation = {
+
+                DateTimeReservation : dateTimeReservation.value,
+                User : user,
+                'resident_pays' : createPay,
+                Amenity : SelectedAmenity
+            }
+
+            console.log(dataReservation);
+
+            const validDataReservation = await strapi.entityValidator.validateEntityCreation(
+                strapi.models.reservation_pay,
+                dataReservation
+            );
+
+            const entryReservation = await strapi.query("reservation-pay").create(validDataReservation);
+        }
         return createPay;
 
     }

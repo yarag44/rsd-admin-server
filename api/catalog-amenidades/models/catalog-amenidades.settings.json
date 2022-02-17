@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "catalog_amenidades",
+  "info": {
+    "name": "CatalogAmenities",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Amenidad": {
+      "type": "string"
+    },
+    "residential": {
+      "model": "residential",
+      "via": "catalog_amenidades"
+    },
+    "Active": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}

@@ -13,7 +13,7 @@
   "pluginOptions": {},
   "attributes": {
     "DateTimeReservation": {
-      "type": "datetime"
+      "type": "date"
     },
     "User": {
       "plugin": "users-permissions",
@@ -23,6 +23,9 @@
     "resident_pays": {
       "collection": "resident-pay",
       "via": "reservation_pay"
+    },
+    "Amenity": {
+      "model": "catalog-amenidades"
     }
   }
 }
