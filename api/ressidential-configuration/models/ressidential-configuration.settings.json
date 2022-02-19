@@ -17,6 +17,9 @@
     },
     "Residential": {
       "model": "residential"
+    },
+    "AmenidadAmount": {
+      "type": "decimal"
     }
   }
 }
