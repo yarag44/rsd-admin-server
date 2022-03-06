@@ -70,6 +70,10 @@
     "reservation_pays": {
       "via": "User",
       "collection": "reservation-pay"
+    },
+    "pp_accepted_by_id_user": {
+      "via": "user",
+      "model": "pp-accepted-by-id-user"
     }
   }
 }

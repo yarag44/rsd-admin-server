@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pp_accepted_by_id_users",
+  "info": {
+    "name": "PPAcceptedByIDUser",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "isAccepted": {
+      "type": "boolean",
+      "default": true
+    },
+    "user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "pp_accepted_by_id_user"
+    }
+  }
+}

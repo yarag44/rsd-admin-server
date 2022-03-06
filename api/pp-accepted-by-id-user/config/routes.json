@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/pp-accepted-by-id-users",
+      "handler": "pp-accepted-by-id-user.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pp-accepted-by-id-users/count",
+      "handler": "pp-accepted-by-id-user.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/pp-accepted-by-id-users/:id",
+      "handler": "pp-accepted-by-id-user.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/pp-accepted-by-id-users",
+      "handler": "pp-accepted-by-id-user.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/pp-accepted-by-id-users/:id",
+      "handler": "pp-accepted-by-id-user.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/pp-accepted-by-id-users/:id",
+      "handler": "pp-accepted-by-id-user.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
