@@ -74,6 +74,10 @@
     "pp_accepted_by_id_user": {
       "via": "user",
       "model": "pp-accepted-by-id-user"
+    },
+    "Tokens": {
+      "via": "Users",
+      "collection": "token-by-id-users"
     }
   }
 }

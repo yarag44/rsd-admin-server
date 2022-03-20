@@ -13,18 +13,21 @@ module.exports = {
 
         const { auth,formData,amount,strapitoken,user,comments,month,year,catPaid,SelectedAmenity,resultPago,dateTimeReservation } = ctx.request.body;
 
-        // console.log(amount);
-        // console.log(user.id);
+        console.log(user);
+        console.log('strapitoken ' + strapitoken);
 
-
-        // const charge = await stripe.charges.create({
-        //     amount: (parseFloat(amount).toFixed(2) * 100).toFixed(0), //totalPayment * 100,
-        //     currency: "mxn",
-        //     source: strapitoken,
-        //     description: `ID Usuario: ${user.id}` ,
-            
-        // });
-
+        if(strapitoken)
+        {
+            if(strapitoken.length > 0)
+            {
+              const charge = await stripe.charges.create({
+                amount: (parseFloat(amount).toFixed(2) * 100).toFixed(0), //totalPayment * 100,
+                currency: "mxn",
+                source: strapitoken,
+                description: `ID Usuario: ${user.id} Concepto: ${catPaid.TypePay}` ,
+              });
+            }
+        }
         //console.log(SelectedAmenity);
 
         const createPay = [];
@@ -32,8 +35,8 @@ module.exports = {
         let data = {
 
             Amount : amount,
-            Year : catPaid.TypePay === 'Pago Reservacion' ? 0 : year,
-            Month : catPaid.TypePay === 'Pago Reservacion' ? 0 : month,
+            Year : catPaid.TypePay === 'Reservacion' ? 0 : year,
+            Month : catPaid.TypePay === 'Reservacion' ? 0 : month,
             Comments : comments,
             User : user,
             'catalog_pay' : catPaid //,
@@ -53,7 +56,7 @@ module.exports = {
         createPay.push(entry);
 
 
-        if(catPaid.TypePay === 'Pago Reservacion')
+        if(catPaid.TypePay === 'Reservacion')
         {
             let dataReservation = {
 
@@ -63,7 +66,7 @@ module.exports = {
                 Amenity : SelectedAmenity
             }
 
-            console.log(dataReservation);
+            //console.log(dataReservation);
 
             const validDataReservation = await strapi.entityValidator.validateEntityCreation(
                 strapi.models.reservation_pay,

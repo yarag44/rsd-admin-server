@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "token_by_id_users",
+  "info": {
+    "name": "TokenByIDUsers",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Token": {
+      "type": "string"
+    },
+    "Users": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "Tokens"
+    }
+  }
+}

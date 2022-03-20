@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/token-by-id-users",
+      "handler": "token-by-id-users.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/token-by-id-users/count",
+      "handler": "token-by-id-users.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/token-by-id-users/:id",
+      "handler": "token-by-id-users.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/token-by-id-users",
+      "handler": "token-by-id-users.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/token-by-id-users/:id",
+      "handler": "token-by-id-users.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/token-by-id-users/:id",
+      "handler": "token-by-id-users.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
