@@ -24,7 +24,7 @@ module.exports = {
                 amount: (parseFloat(amount).toFixed(2) * 100).toFixed(0), //totalPayment * 100,
                 currency: "mxn",
                 source: strapitoken,
-                description: `ID Usuario: ${user.id} Concepto: ${catPaid.TypePay}` ,
+                description: `ID Usuario: ${user.id} UserName: ${user.username} Concepto: ${catPaid.TypePay}` ,
               });
             }
         }
