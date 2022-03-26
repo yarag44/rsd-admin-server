@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "token_by_id_users",
   "info": {
-    "name": "TokenByIDUsers",
+    "name": "Tokens",
     "description": ""
   },
   "options": {
@@ -16,9 +16,9 @@
       "type": "string"
     },
     "Users": {
+      "via": "Tokens",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "Tokens"
+      "model": "user"
     }
   }
 }

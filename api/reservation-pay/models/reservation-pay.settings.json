@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "reservation_pays",
   "info": {
-    "name": "ReservationPay",
+    "name": "Reservaciones",
     "description": ""
   },
   "options": {
@@ -16,13 +16,13 @@
       "type": "date"
     },
     "User": {
+      "via": "reservation_pays",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "reservation_pays"
+      "model": "user"
     },
     "resident_pays": {
-      "collection": "resident-pay",
-      "via": "reservation_pay"
+      "via": "reservation_pay",
+      "collection": "resident-pay"
     },
     "Amenity": {
       "model": "catalog-amenidades"

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "resident_pays",
   "info": {
-    "name": "ResidentPay",
+    "name": "Pagos",
     "description": ""
   },
   "options": {
@@ -41,9 +41,9 @@
       "type": "text"
     },
     "User": {
+      "via": "resident_pays",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "resident_pays"
+      "model": "user"
     },
     "catalog_pay": {
       "model": "catalog-pay"

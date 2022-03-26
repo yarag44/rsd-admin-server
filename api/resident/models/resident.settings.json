@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "residents",
   "info": {
-    "name": "Resident",
+    "name": "Residentes",
     "description": ""
   },
   "options": {
@@ -36,8 +36,8 @@
       "model": "user"
     },
     "residential": {
-      "model": "residential",
-      "via": "residents"
+      "via": "residents",
+      "model": "residential"
     }
   }
 }

@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "residential_pays",
   "info": {
-    "name": "ResidentialPay",
+    "name": "Egresos",
     "description": ""
   },
   "options": {

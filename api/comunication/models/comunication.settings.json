@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "comunications",
   "info": {
-    "name": "Comunication",
+    "name": "Comunicados",
     "description": ""
   },
   "options": {
@@ -34,8 +34,8 @@
       "pluginOptions": {}
     },
     "residential": {
-      "model": "residential",
-      "via": "comunications"
+      "via": "comunications",
+      "model": "residential"
     }
   }
 }

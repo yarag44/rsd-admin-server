@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "catalog_amenidades",
   "info": {
-    "name": "CatalogAmenities",
+    "name": "Cat Amenidades",
     "description": ""
   },
   "options": {
@@ -16,8 +16,8 @@
       "type": "string"
     },
     "residential": {
-      "model": "residential",
-      "via": "catalog_amenidades"
+      "via": "catalog_amenidades",
+      "model": "residential"
     },
     "Active": {
       "type": "boolean",

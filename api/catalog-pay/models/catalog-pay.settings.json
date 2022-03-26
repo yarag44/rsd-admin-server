@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "catalog_pays",
   "info": {
-    "name": "CatalogPay"
+    "name": "Cat Pagos",
+    "description": ""
   },
   "options": {
     "increments": true,

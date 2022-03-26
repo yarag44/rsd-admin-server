@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "ressidential_configurations",
   "info": {
-    "name": "RessidentialConfiguration",
+    "name": "Configuracion",
     "description": ""
   },
   "options": {

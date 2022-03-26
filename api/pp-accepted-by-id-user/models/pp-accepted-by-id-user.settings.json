@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "pp_accepted_by_id_users",
   "info": {
-    "name": "PPAcceptedByIDUser",
+    "name": "Priv Avisos Aceptado",
     "description": ""
   },
   "options": {
@@ -17,9 +17,9 @@
       "default": true
     },
     "user": {
+      "via": "pp_accepted_by_id_user",
       "plugin": "users-permissions",
-      "model": "user",
-      "via": "pp_accepted_by_id_user"
+      "model": "user"
     }
   }
 }

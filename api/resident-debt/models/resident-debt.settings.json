@@ -2,7 +2,7 @@
   "kind": "collectionType",
   "collectionName": "resident_debts",
   "info": {
-    "name": "ResidentDebt",
+    "name": "Residentes Deudores",
     "description": ""
   },
   "options": {
