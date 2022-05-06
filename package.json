@@ -7,10 +7,12 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
-    "strapi": "strapi"
+    "strapi": "strapi",
+    "build:win": "cross-env NODE_ENV=production npm run build"
   },
   "devDependencies": {},
   "dependencies": {
+    "cross-env": "^7.0.3",
     "knex": "0.21.18",
     "sqlite3": "5.0.0",
     "strapi": "3.6.8",
@@ -38,4 +40,3 @@
   },
   "license": "MIT"
 }
-
